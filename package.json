@@ -2,6 +2,10 @@
     "name": "cotton-language-server",
     "version": "0.0.1",
     "publisher": "nanikamado",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nanikamado/cotton-language-server.git"
+    },
     "engines": {
         "vscode": "^1.65.0"
     },
@@ -41,5 +45,6 @@
                 }
             }
         ]
-    }
+    },
+    "license": "MIT"
 }
