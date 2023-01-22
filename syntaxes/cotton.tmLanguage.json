@@ -10,6 +10,9 @@
         },
         {
             "include": "#operators"
+        },
+        {
+            "include": "#comments"
         }
     ],
     "repository": {
@@ -37,6 +40,14 @@
                 {
                     "name": "keyword.operator.cotton",
                     "match": "\\?|\\+|-|\\~|\\!|\\=|\\*|%|<|>|!|&|\\^|\\||:|\\\\|/|,|\\."
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.cotton",
+                    "match": "\\s*//.*"
                 }
             ]
         }
