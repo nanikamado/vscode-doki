@@ -17,7 +17,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.cotton",
-                    "match": "\\b(data|infixr|infixl|forall|where|interface|do)\\b"
+                    "match": "\\b(data|infixr|infixl|forall|where|interface|do|pub|mod|use)\\b"
                 }
             ]
         },
