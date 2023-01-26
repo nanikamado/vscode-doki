@@ -3,6 +3,9 @@
     "name": "cotton",
     "patterns": [
         {
+            "include": "#comments"
+        },
+        {
             "include": "#keywords"
         },
         {
@@ -10,9 +13,6 @@
         },
         {
             "include": "#operators"
-        },
-        {
-            "include": "#comments"
         }
     ],
     "repository": {
@@ -47,7 +47,7 @@
             "patterns": [
                 {
                     "name": "comment.line.double-slash.cotton",
-                    "match": "\\s*//.*"
+                    "match": "//.*"
                 }
             ]
         }
