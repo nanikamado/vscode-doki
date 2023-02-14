@@ -10,9 +10,6 @@
         "vscode": "^1.65.0"
     },
     "main": "./extension.js",
-    "activationEvents": [
-        "onLanguage:cotton"
-    ],
     "dependencies": {
         "vscode-languageclient": "^7.0.0"
     },
