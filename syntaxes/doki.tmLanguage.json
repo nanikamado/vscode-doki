@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "cotton",
+    "name": "doki",
     "patterns": [
         {
             "include": "#comments"
@@ -12,6 +12,9 @@
             "include": "#strings"
         },
         {
+            "include": "#numbers"
+        },
+        {
             "include": "#operators"
         }
     ],
@@ -19,38 +22,42 @@
         "keywords": {
             "patterns": [
                 {
-                    "name": "keyword.control.cotton",
-                    "match": "\\b(data|infixr|infixl|forall|where|interface|do|pub|mod|use)\\b"
+                    "name": "keyword.control.doki",
+                    "match": "\\b(data|match|with|let|in|end)\\b"
                 }
             ]
         },
         "strings": {
-            "name": "string.quoted.double.cotton",
+            "name": "string.quoted.double.doki",
             "begin": "\"",
             "end": "\"",
             "patterns": [
                 {
-                    "name": "constant.character.escape.cotton",
+                    "name": "constant.character.escape.doki",
                     "match": "\\\\."
                 }
             ]
         },
+        "numbers": {
+            "name": "constant.numeric.decimal.doki",
+            "match": "\\b\\d[\\d_]*(\\.?)[\\d_]*\\b"
+        },
         "operators": {
             "patterns": [
                 {
-                    "name": "keyword.operator.cotton",
-                    "match": "\\?|\\+|-|\\~|\\!|\\=|\\*|%|<|>|!|&|\\^|\\||:|\\\\|/|,|\\."
+                    "name": "keyword.operator.doki",
+                    "match": "\\?|\\+|-|\\~|\\!|\\=|\\*|%|<|>|!|&|\\^|\\||:|\\\\|/|\\."
                 }
             ]
         },
         "comments": {
             "patterns": [
                 {
-                    "name": "comment.line.double-slash.cotton",
+                    "name": "comment.line.double-slash.doki",
                     "match": "//.*"
                 }
             ]
         }
     },
-    "scopeName": "source.cotton"
+    "scopeName": "source.doki"
 }

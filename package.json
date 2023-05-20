@@ -1,10 +1,10 @@
 {
-    "name": "cotton-language-server",
-    "version": "0.1.2",
+    "name": "doki-language-server",
+    "version": "0.0.1",
     "publisher": "nanikamado",
     "repository": {
         "type": "git",
-        "url": "https://github.com/nanikamado/cotton-language-server.git"
+        "url": "https://github.com/nanikamado/vscode-doki.git"
     },
     "engines": {
         "vscode": "^1.65.0"
@@ -16,18 +16,18 @@
     "contributes": {
         "languages": [
             {
-                "id": "cotton",
+                "id": "doki",
                 "extensions": [
-                    ".cot"
+                    ".doki"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "cotton",
-                "scopeName": "source.cotton",
-                "path": "./syntaxes/cotton.tmLanguage.json"
+                "language": "doki",
+                "scopeName": "source.doki",
+                "path": "./syntaxes/doki.tmLanguage.json"
             }
         ],
         "semanticTokenScopes": [
