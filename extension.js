@@ -7,7 +7,7 @@ let client;
 function activate(context) {
     try {
         const serverOptions = {
-            command: "cotton",
+            command: "doki",
             args: [
                 "--language-server",
             ]
@@ -16,11 +16,11 @@ function activate(context) {
             documentSelector: [
                 {
                     scheme: "file",
-                    language: "cotton",
+                    language: "doki",
                 }
             ],
         };
-        client = new languageclient.LanguageClient("cotton-language-server", serverOptions, clientOptions);
+        client = new languageclient.LanguageClient("doki-language-server", serverOptions, clientOptions);
         context.subscriptions.push(client.start());
     } catch (e) {
         vscode.window.showErrorMessage(`${e}`);
