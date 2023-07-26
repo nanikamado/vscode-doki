@@ -10,6 +10,9 @@
         "vscode": "^1.65.0"
     },
     "main": "./extension.js",
+    "activationEvents": [
+        "onLanguage:doki"
+    ],
     "dependencies": {
         "vscode-languageclient": "^7.0.0"
     },
