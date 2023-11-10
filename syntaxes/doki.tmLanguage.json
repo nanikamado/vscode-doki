@@ -19,22 +19,65 @@
         }
     ],
     "repository": {
+        "escapes": {
+            "comment": "escapes: ASCII, byte, Unicode, quote, regex",
+            "name": "constant.character.escape.doki",
+            "match": "(\\\\)(?:(?:(x[0-7][\\da-fA-F])|(u(\\{)[\\da-fA-F]{4,6}(\\}))|.))",
+            "captures": {
+                "1": {
+                    "name": "constant.character.escape.backslash.doki"
+                },
+                "2": {
+                    "name": "constant.character.escape.bit.doki"
+                },
+                "3": {
+                    "name": "constant.character.escape.unicode.doki"
+                },
+                "4": {
+                    "name": "constant.character.escape.unicode.punctuation.doki"
+                },
+                "5": {
+                    "name": "constant.character.escape.unicode.punctuation.doki"
+                }
+            }
+        },
         "keywords": {
             "patterns": [
                 {
                     "name": "keyword.control.doki",
-                    "match": "\\b(data|match|with|let|in|end)\\b"
+                    "match": "\\b(data|match|with|let|in|end|import)\\b"
                 }
             ]
         },
         "strings": {
-            "name": "string.quoted.double.doki",
-            "begin": "\"",
-            "end": "\"",
             "patterns": [
                 {
-                    "name": "constant.character.escape.doki",
-                    "match": "\\\\."
+                    "comment": "double-quoted strings and byte strings",
+                    "name": "string.quoted.double.doki",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "include": "#escapes"
+                        }
+                    ]
+                },
+                {
+                    "comment": "double-quoted raw strings and raw byte strings",
+                    "name": "string.quoted.double.doki",
+                    "begin": "(r)(#*)(\")",
+                    "end": "(\")(\\2)"
+                },
+                {
+                    "comment": "characters and bytes",
+                    "name": "string.quoted.single.char.doki",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "include": "#escapes"
+                        }
+                    ]
                 }
             ]
         },
